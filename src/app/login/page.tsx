@@ -13,7 +13,7 @@ export default function LoginPage() {
     console.log(password);
   };
 
-  const handleClickRegister = () => {
+  const handleClickOrRegister = () => {
     router.push("/register");
   };
 
@@ -54,7 +54,7 @@ export default function LoginPage() {
           <Button
             variant="text"
             className="text-black"
-            onClick={handleClickRegister}
+            onClick={handleClickOrRegister}
           >
             Or Register
           </Button>

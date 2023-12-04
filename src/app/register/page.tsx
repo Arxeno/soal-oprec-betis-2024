@@ -8,13 +8,13 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const handleClickLogin = () => {
+  const handleClickRegister = () => {
     console.log(username);
     console.log(password);
   };
 
-  const handleClickRegister = () => {
-    router.push("/register");
+  const handleClickBackToLogin = () => {
+    router.push("/login");
   };
 
   const handleChangeUsername = (event: ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +46,7 @@ export default function LoginPage() {
           <Button
             variant="contained"
             className="text-black"
-            onClick={handleClickLogin}
+            onClick={handleClickRegister}
           >
             Register
           </Button>
@@ -54,7 +54,7 @@ export default function LoginPage() {
           <Button
             variant="text"
             className="text-black"
-            onClick={handleClickRegister}
+            onClick={handleClickBackToLogin}
           >
             Back to login
           </Button>
