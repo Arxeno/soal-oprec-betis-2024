@@ -58,6 +58,7 @@ export default function LoginPage() {
         <TextField
           variant="filled"
           label="Username"
+          value={username}
           onChange={handleChangeUsername}
         />
 
@@ -65,6 +66,7 @@ export default function LoginPage() {
           variant="filled"
           label="Password"
           type="password"
+          value={password}
           onChange={handleChangePassword}
         />
 
@@ -72,6 +74,7 @@ export default function LoginPage() {
           variant="filled"
           label="Confirm Password"
           type="password"
+          value={confirmPassword}
           onChange={handleChangeConfirmPassword}
         />
 
