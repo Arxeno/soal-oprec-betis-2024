@@ -17,7 +17,7 @@ export default function LoginPage() {
     fetch(`https://oprec-betis-be.up.railway.app/auth/register`, {
       method: "POST",
       headers: {
-        "Content-Application": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         username,
