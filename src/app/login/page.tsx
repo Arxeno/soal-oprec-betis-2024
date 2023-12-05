@@ -23,12 +23,13 @@ export default function LoginPage() {
         password,
       }),
     })
-      .then((res) => (res.ok ? res.json() : alert("Failed to login.")))
+      .then((res) => res.json())
       .then((resJson) => {
+        if (resJson.statusCode != 200) throw new Error(resJson.message);
         alert("Success login!");
         setToken(resJson.access_token);
       })
-      .catch((err) => console.log(`An error has occured: ${err}`));
+      .catch((err) => alert(`An error has occured: ${err}`));
   };
 
   const handleClickOrRegister = () => {
@@ -80,7 +81,10 @@ export default function LoginPage() {
           </Button>
         </div>
       </div>
-      <h1>Token: {token ? token : "<token will appear here>"}</h1>
+      <h1 className="max-w-[400px] w-[80%] break-words">
+        <span className="font-bold">Token:</span>{" "}
+        {token ? token : "<token will appear here>"}
+      </h1>
     </main>
   );
 }
