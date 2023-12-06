@@ -97,6 +97,12 @@ export default function LoginPage() {
           </Button>
         </div>
       </div>
+      {token ? (
+        <h1 className="font-bold text-red-500">
+          Simpan baik-baik access_token anda
+        </h1>
+      ) : null}
+
       <h1 className="max-w-[400px] w-[80%] break-words">
         <span className="font-bold">Token:</span>{" "}
         {token ? token : "<token will appear here>"}
